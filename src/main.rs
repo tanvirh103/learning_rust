@@ -9,6 +9,8 @@ struct MyInfo{
 }
 fn main() {
     let m=My(true,-5,5);
+    let l=My(false,10,5);
+    println!("{:?}",l);
     //println!("{:?}",m);
     let x=MyInfo{
         name:"Tanvir",
