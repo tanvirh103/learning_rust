@@ -22,18 +22,18 @@ fn main() {
     let mut con:Config=Config{port:1616};
     let s:&mut Config=&mut con;
     s.port=4000;
-    println!("{}",using.port);
-    println!("changed port: {}",con.port);
+    //println!("{}",using.port);
+    //println!("changed port: {}",con.port);
     let m=My(true,-5,5);
     let l=My(false,10,5);
-    println!("{:?}",l);
+    //println!("{:?}",l);
     //println!("{:?}",m);
     let x=MyInfo{
         name:"Tanvir",
         cgpa:3.59,
         num:01534103985
     };
-    println!("{:?}",x);
+    //println!("{:?}",x);
 
     let p=Person{
         name:"Tanvir Tamal",
@@ -42,8 +42,11 @@ fn main() {
     };
     // println!("{:?}",p)
     let Person{name,age,phone}=p;
-    println!("{}",phone);
-   
+    //println!("{}",phone);
+    
+    for i in (1..=10){
+        println!("{i}");
+    }
 }
 fn number(x:usize){
     if x==5{
