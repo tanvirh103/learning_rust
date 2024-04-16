@@ -10,6 +10,12 @@ struct MyInfo{
 struct Config{
     port:u16
 }
+#[derive(Debug)]
+struct Person{
+    name:&'static str,
+    age:i32,
+    phone:&'static str
+}
 fn main() {
     let config:Config=Config{port:8080};
     let using:&Config=&config;
@@ -27,7 +33,16 @@ fn main() {
         cgpa:3.59,
         num:01534103985
     };
-    println!("{:?}",x)
+    println!("{:?}",x);
+
+    let p=Person{
+        name:"Tanvir Tamal",
+        age:21,
+        phone:"01534103985",
+    };
+    // println!("{:?}",p)
+    let Person{name,age,phone}=p;
+    println!("{}",phone);
    
 }
 fn number(x:usize){
